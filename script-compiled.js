@@ -14,7 +14,8 @@ var Stopwatch = function (_React$Component) {
     function Stopwatch(display) {
         _classCallCheck(this, Stopwatch);
 
-        var _this = _possibleConstructorReturn(this, (Stopwatch.__proto__ || Object.getPrototypeOf(Stopwatch)).call(this, display));
+        var _this = _possibleConstructorReturn(this, (Stopwatch.__proto__ || Object.getPrototypeOf(Stopwatch)).call(this, display)); //field in which our timer is to appear
+
 
         _this.state = {
             running: false,

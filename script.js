@@ -1,5 +1,5 @@
 class Stopwatch extends React.Component {
-    constructor(display) {
+    constructor(display) { //field in which our timer is to appear
         super(display);
         this.state = {
             running: false,
@@ -18,23 +18,23 @@ class Stopwatch extends React.Component {
         })
     }
 
-    format(times) {
+	format(times) {
         return `${pad0(this.state.minutes)}:${pad0(this.state.seconds)}:${pad0(Math.floor(this.state.miliseconds))}`;
     }
 
-    start() {
+	start() {
         if (!this.running) {
             this.running = true,
                 this.watch = setInterval(() => this.step(), 10)
         }
     }
 
-    step() {
+	step() {
         if (!this.running) return;
         this.calculate();
     }
 
-    calculate() {
+	calculate() {
         let {
             miliseconds,
             seconds,
@@ -57,12 +57,12 @@ class Stopwatch extends React.Component {
         });
     }
 
-    stop() {
+	stop() {
         this.running = false;
         clearInterval(this.watch);
     }
 
-    render() {
+	render() {
         return (
             <div>
                 <nav className='controls'>

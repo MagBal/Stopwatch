@@ -40,6 +40,7 @@ class Stopwatch extends React.Component {
             seconds,
             minutes
         } = this.state;
+
         miliseconds += 1;
         if (miliseconds >= 100) {
             seconds += 1;
@@ -65,8 +66,8 @@ class Stopwatch extends React.Component {
         return (
             <div>
                 <nav className='controls'>
-                    <button className='start' onClick={()=> this.start() }>Start</button>
-                    <button className='stop' onClick={()=> this.stop() }>Stop</button>
+                    <button className='start' onClick={() => this.start() }>Start</button>
+                    <button className='stop' onClick={() => this.stop() }>Stop</button>
                 </nav>
                 <div className={'stopwatch'}>{this.format()}</div>
             </div>

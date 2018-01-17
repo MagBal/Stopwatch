@@ -101,23 +101,27 @@ var Stopwatch = function (_React$Component) {
                     { className: 'controls' },
                     React.createElement(
                         'button',
-                        { className: 'start', onClick: function onClick() {
+                        { className: 'start',
+                            onClick: function onClick() {
                                 return _this3.start();
                             } },
-                        'Start'
+                        ' Start '
                     ),
                     React.createElement(
                         'button',
-                        { className: 'stop', onClick: function onClick() {
+                        { className: 'stop',
+                            onClick: function onClick() {
                                 return _this3.stop();
                             } },
-                        'Stop'
+                        ' Stop '
                     )
                 ),
                 React.createElement(
                     'div',
                     { className: 'stopwatch' },
-                    this.format()
+                    ' ',
+                    this.format(),
+                    ' '
                 )
             );
         }

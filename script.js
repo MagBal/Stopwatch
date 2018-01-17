@@ -22,7 +22,7 @@ class Stopwatch extends React.Component {
         return `${pad0(this.state.minutes)}:${pad0(this.state.seconds)}:${pad0(Math.floor(this.state.miliseconds))}`;
     }
 
-	start() {
+    start() {
         if (!this.running) {
             this.running = true,
                 this.watch = setInterval(() => this.step(), 10)
@@ -61,18 +61,28 @@ class Stopwatch extends React.Component {
         this.running = false;
         clearInterval(this.watch);
     }
-
-	render() {
-    	return ( 
-    		<div>
-			<nav className='controls'>
-				<button className='start' onClick={() => this.start() }>Start</button>
-				<button className='stop' onClick={() => this.stop() }>Stop</button>
-			</nav>
-			<div className={'stopwatch'}>{this.format()}</div>
-		</div>
-    	);
-}
+    
+    render() {
+        return ( 
+        	<div>
+            <nav className = 'controls'>
+            <button className = 'start'
+            onClick = {
+                () => this.start()
+            }> Start </button> 
+            < button className = 'stop'
+            onClick = {
+                () => this.stop()
+            }> Stop </button> 
+            </nav> 
+            <div className = {
+                'stopwatch'
+            }> {
+                this.format()
+            } </div > 
+            </div >
+        );
+    }
 };
 
 const stopwatch = new Stopwatch(

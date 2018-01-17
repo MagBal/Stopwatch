@@ -22,7 +22,7 @@ class Stopwatch extends React.Component {
         return `${pad0(this.state.minutes)}:${pad0(this.state.seconds)}:${pad0(Math.floor(this.state.miliseconds))}`;
     }
 
-    start() {
+	start() {
         if (!this.running) {
             this.running = true,
                 this.watch = setInterval(() => this.step(), 10)

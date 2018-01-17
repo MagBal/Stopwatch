@@ -62,7 +62,7 @@ class Stopwatch extends React.Component {
         clearInterval(this.watch);
     }
 
-    render() {
+	render() {
     	return ( 
     		<div>
 			<nav className='controls'>
@@ -71,8 +71,8 @@ class Stopwatch extends React.Component {
 			</nav>
 			<div className={'stopwatch'}>{this.format()}</div>
 		</div>
-    		);
-	}
+    	);
+}
 };
 
 const stopwatch = new Stopwatch(

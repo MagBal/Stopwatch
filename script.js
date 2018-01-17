@@ -61,26 +61,28 @@ class Stopwatch extends React.Component {
         this.running = false;
         clearInterval(this.watch);
     }
-    
+
     render() {
-        return ( 
-        	<div>
-            <nav className = 'controls'>
-            <button className = 'start'
+        return ( <
+            div >
+            <
+            nav className = 'controls' >
+            <
+            button className = 'start'
             onClick = {
                 () => this.start()
-            }> Start </button> 
-            < button className = 'stop'
+            } > Start < /button> <
+            button className = 'stop'
             onClick = {
                 () => this.stop()
-            }> Stop </button> 
-            </nav> 
-            <div className = {
+            } > Stop < /button> <
+            /nav> <
+            div className = {
                 'stopwatch'
-            }> {
+            } > {
                 this.format()
-            } </div > 
-            </div >
+            } < /div> <
+            /div>
         );
     }
 };

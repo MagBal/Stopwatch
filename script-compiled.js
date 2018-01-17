@@ -107,6 +107,7 @@ var Stopwatch = function (_React$Component) {
                             } },
                         ' Start '
                     ),
+                    ' ',
                     React.createElement(
                         'button',
                         { className: 'stop',
@@ -114,15 +115,18 @@ var Stopwatch = function (_React$Component) {
                                 return _this3.stop();
                             } },
                         ' Stop '
-                    )
+                    ),
+                    ' '
                 ),
+                ' ',
                 React.createElement(
                     'div',
                     { className: 'stopwatch' },
                     ' ',
                     this.format(),
                     ' '
-                )
+                ),
+                ' '
             );
         }
     }]);
